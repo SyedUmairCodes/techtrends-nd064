@@ -1,25 +1,32 @@
-containerPort: 3111
-image: 
-  pullPolicy: IfNotPresent
+namespace: sandbox
+
+service:
+  port: 4111
+  targetPort: 3111
+  protocol: TCP
+  type: ClusterIP
+
+image:
   repository: techtrends
   tag: latest
-livenessProbe: 
-  path: /healthz
-  port: 3111
-namespace: staging
-readinessProbe: 
-  path: /healthz
-  port: 3111
+  pullPolicy: IfNotPresent
+
 replicaCount: 1
-resources: 
-  limits: 
-    cpu: 500m
-    memory: 128Mi
-  requests: 
-    cpu: 250m
+
+resources:
+  requests:
     memory: 64Mi
-service: 
-  port: 4111
-  protocol: TCP
-  targetPort: 3111
-  type: ClusterIP
+    cpu: 250m
+  limits:
+    memory: 128Mi
+    cpu: 500m
+
+containerPort: 3111
+
+livenessProbe:
+  path: /healthz
+  port: 3111
+
+readinessProbe:
+  path: /healthz
+  port: 3111

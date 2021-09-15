@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
-metadata: 
+metadata:
   name: techtrends-staging
   namespace: argocd
-spec: 
-  destination: 
-    namespace: default
-    server: "https://kubernetes.default.svc"
+spec:
+  destination:
+    namespace: staging
+    server: https://kubernetes.default.svc
   project: default
-  source: 
-    helm: 
-      valueFiles: 
-        - values-staging.yaml
+  source:
+    helm:
+      valueFiles:
+      - values-staging.yaml
     path: helm
-    repoURL: "https://github.com/SyedUmairAli2000/techtrends-nd064"
+    repoURL: https://github.com/SyedUmairAli2000/techtrends-nd064
     targetRevision: HEAD
