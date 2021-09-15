@@ -4,7 +4,6 @@
 ## Docker commands used to run the application
 # docker run -p 7111:3111 -d --name=techtrends techtrends:latest
 
-
 ## Docker commands used to get the application logs
 # docker logs techtrends
 
