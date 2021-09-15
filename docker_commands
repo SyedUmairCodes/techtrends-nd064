@@ -1,0 +1,33 @@
+## Docker commands used to build the application 
+# docker build -f ./Dockerfile -t techtrends .
+
+## Docker commands used to run the application
+# docker run -p 7111:3111 -d --name=techtrends techtrends:latest
+
+
+## Docker commands used to get the application logs
+# docker logs techtrends
+
+## Logs from the container running the TechTrends application
+
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+172.17.0.1 - - [14/Sep/2021 11:09:59] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [14/Sep/2021 11:09:59] "GET /static/css/main.css HTTP/1.1" 200 -
+172.17.0.1 - - [14/Sep/2021 11:09:59] "GET /favicon.ico HTTP/1.1" 404 -
+[2021-09-14 11:10:31,267] INFO in app: Post 2020 CNCF Annual Report was accessed
+INFO:app:14/09/2021, 11:10:31, Post 2020 CNCF Annual Report was accessed
+INFO:app:14/09/2021, 11:10:31, Post 2020 CNCF Annual Report was accessed
+172.17.0.1 - - [14/Sep/2021 11:10:31] "GET /1 HTTP/1.1" 200 -
+[2021-09-14 11:10:34,771] INFO in app: The About Us page is retrieved
+INFO:app:14/09/2021, 11:10:34, The About Us page is retrieved
+INFO:app:14/09/2021, 11:10:34, The About Us page is retrieved
+172.17.0.1 - - [14/Sep/2021 11:10:34] "GET /about HTTP/1.1" 200 -
+[2021-09-14 11:10:44,679] INFO in app: The post with the id 9 was not found
+INFO:app:14/09/2021, 11:10:44, The post with the id 9 was not found
+INFO:app:14/09/2021, 11:10:44, The post with the id 9 was not found
+172.17.0.1 - - [14/Sep/2021 11:10:44] "GET /9 HTTP/1.1" 404 -

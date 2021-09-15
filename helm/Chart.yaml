@@ -1,0 +1,11 @@
+apiVersion: v1
+keywords: 
+  - techtrends
+maintainers: 
+  - 
+    name: "Syed Umair Ali"
+  - 
+    email: syedumairali.617@gmail.com
+name: techtrends
+type: application
+version: "1.0.0"
